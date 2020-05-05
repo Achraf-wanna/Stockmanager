@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inventory management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+
+    <link rel="stylesheet" href="../style.css">
+    <script src="script.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   
+    <h1>Update Supplier</h1>
+    <div class="form">
+
+
+            <% test.forEach(function (produc) { %>
+                <form method="POST" action="/updatefourni/<%= produc.id %>" class="form">
+                    <% }) %>
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-sm">Supplier</span>
+                        </div>
+                        <input  name="nomfour" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
+                      </div>
+        
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-sm">E-mail</span>
+                        </div>
+                        <input  name="mail" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
+                      </div>
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-sm">Phone No</span>
+                        </div>
+                        <input  name="tele" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"required>
+                      </div>                          
+                      <input class="btn btn-outline-success" type="submit" value="submit">
+                      <a style="margin-top: 20px;" type="button" href="/fournisseur"  class="btn btn-outline-warning">Back</a>
+        </form>
+
+
+
+        <br> <br>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

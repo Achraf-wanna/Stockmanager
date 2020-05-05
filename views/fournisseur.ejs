@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inventory management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+        
+    <h1>All Suppliers :</h1>
+   
+
+
+        <table id="myTable" >  
+            <thead>  
+                <tr class="table100-head">  
+                    <th class="column">ID</th>  
+                    <th class="column">Supplier</th>  
+                    <th class="column">E-mail</th>  
+                    <th class="column">Phone No</th>                    
+                    <th style="width: 50px;" class="column"></th>  
+                    <th style="width: 80px;" class="column"></th>  
+
+
+
+                </tr>  
+            </thead>  
+             <tbody>  
+             <% fournisseurs.forEach(function (four) { %>
+                <tr>  
+                    <td class="column"><%= four.id %> </td>  
+                    <td class="column"><%= four.nomfour %></td>  
+                    <td class="column"><%= four.mail %></td>
+                    <td class="column"><%= four.tele %></td>
+                 
+                    <td><a href="/updatefourni/<%= four.id %> " class="btn btn-outline-success"> UPDATE</a> </td>
+                    </td>
+                    
+                    <td><a href="/delete/four/<%= four.id %>" class="btn btn-outline-danger">Delete</a>
+
+                </tr>
+                                                   
+             <% }) %>
+             </tbody>
+        </table>  
+        
+        <div class="form-group">
+            <a style="margin-right: 50px;" type="button" href="/"  class="btn btn-outline-primary">Browse Products</a>
+            <a style="margin-right: 50px;" type="button" href="/addfourn"  class="btn btn-outline-danger">Add Supplier</a>
+            <a type="button" href="/rayon"  class="btn btn-outline-primary">Browse sections</a>
+    
+        </div>
+       
+
+
+
+
+
+        
+
+
+</body>
+
+</html>

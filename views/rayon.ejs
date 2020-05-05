@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inventory management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  
+        
+    <h1>Sections :</h1>
+   
+
+
+        <table id="myTable" >  
+            <thead>  
+                <tr class="table100-head">  
+                    <th class="column">ID</th>  
+                    <th class="column">Section</th>  
+                                   
+                    <th style="width: 50px;" class="column"></th>  
+                    <th style="width: 80px;" class="column"></th>  
+
+
+
+                </tr>  
+            </thead>  
+             <tbody>  
+             <% rayons.forEach(function (ray) { %>
+                <tr>  
+                    <td class="column"><%= ray.id %> </td>  
+                    <td class="column"><%= ray.categorie %></td>  
+                    
+                    <td><a href="/updatedepartment/<%= ray.id %> " class="btn btn-outline-success"> UPDATE</a> 
+                    
+                    </td>
+                    <td><a href="/delete/cat/<%= ray.id %>" class="btn btn-outline-danger">Delete</a>
+                    </td>
+
+                </tr>
+                                                   
+             <% }) %>
+             </tbody>
+        </table>  
+        
+        
+    <div class="form-group">
+        <a style="margin-right: 50px;" type="button" href="/"  class="btn btn-outline-primary">Browse Products</a>
+        <a style="margin-right: 50px;" type="button" href="/addcat"  class="btn btn-outline-danger">Add a section</a>
+        <a style="margin-right: 50px;" type="button" href="/fournisseur"  class="btn btn-outline-primary">Browse suppliers</a>
+
+    </div>
+
+
+
+
+
+        
+
+
+</body>
+
+</html>
